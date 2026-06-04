@@ -107,12 +107,16 @@ export default function Home() {
           aria-labelledby="featured-heading"
           className="mb-20 sm:mb-28 scroll-mt-16"
         >
-          <p className="text-xs font-medium uppercase tracking-wider text-foreground/60 sm:text-sm">
+          <h2
+            id="featured-heading"
+            aria-labelledby="featured-heading"
+            className="text-xs font-medium uppercase tracking-wider text-foreground/60 sm:text-sm"
+          >
             Featured Work
-          </p>
+          </h2>
           <ul className="mt-6 space-y-2 text-base text-foreground/80">
             <li>
-              <article className="w-full rounded-2xl border p-6 flex gap-3 items-start flex-col mt-2 border-b border-foreground/10 pb-4">
+              <article className="flex flex-col gap-3 rounded-2xl border border-foreground/10 p-6">
                 <h3 className="w-full border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl flex-shrink-0 mt-1">
                   AI Meeting Notes Tool
                 </h3>
@@ -137,7 +141,7 @@ export default function Home() {
               </article>
             </li>
             <li>
-              <article className="w-full rounded-2xl border p-6 flex gap-3 items-start flex-col mt-2 border-b border-foreground/10 pb-4">
+              <article className="flex flex-col gap-3 rounded-2xl border border-foreground/10 p-6">
                 <h3 className="w-full border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl flex-shrink-0 mt-1">
                   CollabPlan
                 </h3>
@@ -149,7 +153,7 @@ export default function Home() {
                 </p>
                 <ul className="space-y-2 text-base text-foreground/80">
                   {collabPlanProofPoints.map((point) => (
-                    <li key={point} className="flex gap-3 items-center mt-2">
+                    <li key={point} className="flex gap-3 items-center">
                       <span
                         aria-hidden="true"
                         className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/50"
