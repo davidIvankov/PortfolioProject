@@ -8,14 +8,11 @@ const aiMeetingNotesToolProofPoints = [
 ];
 
 const collabPlanProofPoints = [
-  "Public GitHub repository",
-  "Authentication",
-  "Client/server application structure",
-  "Participant management",
-  "Task assignment",
-  "AI-assisted task duration suggestions",
-  "Calendar and notification features",
-  "Tests and Docker setup",
+  "Public GitHub repository with client and server structure",
+  "TypeScript-heavy codebase with Vue frontend work",
+  "Authentication, project management, participant roles, and task assignment",
+  "AI-powered task duration suggestions",
+  "Calendar view, notifications, and documented test commands",
 ];
 
 const skillGroups = [
@@ -146,10 +143,11 @@ export default function Home() {
                   CollabPlan
                 </h3>
                 <p className="flex-1 text-base leading-relaxed text-foreground/80">
-                  A collaborative project planning application for remote teams
-                  with authentication, project creation, participant management,
-                  task assignment, AI-powered task duration suggestions,
-                  notifications, and calendar-based task visualization.
+                  CollabPlan is a collaborative project planning application for
+                  remote teams. It supports secure login and registration,
+                  project creation, participant roles, task assignment,
+                  AI-powered task duration suggestions, notifications, and
+                  calendar-based task visualization.
                 </p>
                 <ul className="space-y-2 text-base text-foreground/80">
                   {collabPlanProofPoints.map((point) => (
