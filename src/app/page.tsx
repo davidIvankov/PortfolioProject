@@ -53,7 +53,7 @@ export default function Home() {
               </Link>
             </li>
             <li>
-              <Link href="#featured-project" className="hover:text-foreground">
+              <Link href="#featured-work" className="hover:text-foreground">
                 Featured Work
               </Link>
             </li>
@@ -85,10 +85,10 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <a
-              href="#featured-project"
+              href="#featured-work"
               className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-3 text-sm font-medium text-background sm:text-base"
             >
-              View case study
+              View Featured Work
             </a>
             <a
               href="#contact"
@@ -99,37 +99,29 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="featured-project"
-          aria-labelledby="featured-heading"
-          className="mb-20 sm:mb-28 scroll-mt-16"
-        >
-          <h2
-            id="featured-heading"
-            aria-labelledby="featured-heading"
-            className="text-xs font-medium uppercase tracking-wider text-foreground/60 sm:text-sm"
-          >
+        <section id="featured-work" className="mb-20 sm:mb-28 scroll-mt-16">
+          <h2 className="text-xs font-medium uppercase tracking-wider text-foreground/60 sm:text-sm">
             Featured Work
           </h2>
           <ul className="mt-6 space-y-2 text-base text-foreground/80">
             <li>
               <article className="flex flex-col gap-3 rounded-2xl border border-foreground/10 p-6">
-                <h3 className="w-full border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl flex-shrink-0 mt-1">
+                <h3 className="border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl">
                   AI Meeting Notes Tool
                 </h3>
-                <p className="flex-1 text-base leading-relaxed text-foreground/80">
+                <p className="text-base leading-relaxed text-foreground/80">
                   A SaaS-style web app that turns meeting content into
                   structured summaries and action items. The project includes
                   public product pages, beta access flow, pricing, privacy,
                   terms, and a sample meeting page to show the product clearly
                   without exposing the private repository.
                 </p>
-                <ul className="space-y-2 text-base text-foreground/80">
+                <ul className="mt-6 space-y-4">
                   {aiMeetingNotesToolProofPoints.map((point) => (
-                    <li key={point} className="flex gap-3 items-center">
+                    <li key={point} className="flex items-start gap-3">
                       <span
                         aria-hidden="true"
-                        className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/50"
+                        className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/50"
                       />
                       <span>{point}</span>
                     </li>
@@ -139,22 +131,22 @@ export default function Home() {
             </li>
             <li>
               <article className="flex flex-col gap-3 rounded-2xl border border-foreground/10 p-6">
-                <h3 className="w-full border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl flex-shrink-0 mt-1">
+                <h3 className="border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl">
                   CollabPlan
                 </h3>
-                <p className="flex-1 text-base leading-relaxed text-foreground/80">
+                <p className="text-base leading-relaxed text-foreground/80">
                   CollabPlan is a collaborative project planning application for
                   remote teams. It supports secure login and registration,
                   project creation, participant roles, task assignment,
                   AI-powered task duration suggestions, notifications, and
                   calendar-based task visualization.
                 </p>
-                <ul className="space-y-2 text-base text-foreground/80">
+                <ul className="mt-6 space-y-4">
                   {collabPlanProofPoints.map((point) => (
-                    <li key={point} className="flex gap-3 items-center">
+                    <li key={point} className="flex items-start gap-3">
                       <span
                         aria-hidden="true"
-                        className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/50"
+                        className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/50"
                       />
                       <span>{point}</span>
                     </li>
