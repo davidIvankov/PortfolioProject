@@ -1,10 +1,21 @@
 import Link from "next/link";
 
-const proofPoints = [
+const aiMeetingNotesToolProofPoints = [
   "Built with Next.js, React, TypeScript, Tailwind, and Vercel",
   "Invite-gated beta flow and request-access path",
   "Public sample meeting page for recruiter/customer review",
   "Privacy, terms, pricing, and how-it-works pages",
+];
+
+const collabPlanProofPoints = [
+  "Public GitHub repository",
+  "Authentication",
+  "Client/server application structure",
+  "Participant management",
+  "Task assignment",
+  "AI-assisted task duration suggestions",
+  "Calendar and notification features",
+  "Tests and Docker setup",
 ];
 
 const skillGroups = [
@@ -97,31 +108,58 @@ export default function Home() {
           className="mb-20 sm:mb-28 scroll-mt-16"
         >
           <p className="text-xs font-medium uppercase tracking-wider text-foreground/60 sm:text-sm">
-            Featured project
-          </p>
-          <h2
-            id="featured-heading"
-            className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl"
-          >
-            AI Meeting Notes Tool
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-foreground/80">
-            A SaaS-style web app that turns meeting content into structured
-            summaries and action items. The project includes public product
-            pages, beta access flow, pricing, privacy, terms, and a sample
-            meeting page to show the product clearly without exposing the
-            private repository.
+            Featured Work
           </p>
           <ul className="mt-6 space-y-2 text-base text-foreground/80">
-            {proofPoints.map((point) => (
-              <li key={point} className="flex gap-3">
-                <span
-                  aria-hidden="true"
-                  className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/50"
-                />
-                <span>{point}</span>
-              </li>
-            ))}
+            <li>
+              <article className="w-full rounded-2xl border p-6 flex gap-3 items-start flex-col mt-2 border-b border-foreground/10 pb-4">
+                <h3 className="w-full border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl flex-shrink-0 mt-1">
+                  AI Meeting Notes Tool
+                </h3>
+                <p className="flex-1 text-base leading-relaxed text-foreground/80">
+                  A SaaS-style web app that turns meeting content into
+                  structured summaries and action items. The project includes
+                  public product pages, beta access flow, pricing, privacy,
+                  terms, and a sample meeting page to show the product clearly
+                  without exposing the private repository.
+                </p>
+                <ul className="space-y-2 text-base text-foreground/80">
+                  {aiMeetingNotesToolProofPoints.map((point) => (
+                    <li key={point} className="flex gap-3 items-center">
+                      <span
+                        aria-hidden="true"
+                        className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/50"
+                      />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article className="w-full rounded-2xl border p-6 flex gap-3 items-start flex-col mt-2 border-b border-foreground/10 pb-4">
+                <h3 className="w-full border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl flex-shrink-0 mt-1">
+                  CollabPlan
+                </h3>
+                <p className="flex-1 text-base leading-relaxed text-foreground/80">
+                  A collaborative project planning application for remote teams
+                  with authentication, project creation, participant management,
+                  task assignment, AI-powered task duration suggestions,
+                  notifications, and calendar-based task visualization.
+                </p>
+                <ul className="space-y-2 text-base text-foreground/80">
+                  {collabPlanProofPoints.map((point) => (
+                    <li key={point} className="flex gap-3 items-center mt-2">
+                      <span
+                        aria-hidden="true"
+                        className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/50"
+                      />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </li>
           </ul>
         </section>
 
