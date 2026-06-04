@@ -39,6 +39,28 @@ Important proof points:
 - Deployed on Vercel
 - Built with modern web stack
 
+## Secondary project
+
+CollabPlan
+
+GitHub: https://github.com/davidIvankov/CollabPlan
+
+Positioning:
+A collaborative project planning application for remote teams.
+
+Proof points:
+
+- Public GitHub repository
+- Authentication
+- Project creation and management
+- Participant management
+- Task assignment
+- AI-powered task duration suggestions
+- Notifications
+- Calendar integration for task visualization
+- Client/server structure
+- Tests and Docker setup
+
 ## Portfolio pages
 
 First version should include:
@@ -103,5 +125,5 @@ Before committing:
 - The code is simple and maintainable
 - No unnecessary dependencies were added
 - No unrelated files were changed
--  passes
--  passes
+- passes
+- passes
