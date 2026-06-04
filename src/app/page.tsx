@@ -31,7 +31,10 @@ export default function Home() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <nav className="mx-auto w-full max-w-3xl px-6 py-4 sm:px-8 sm:py-6 flex items-center justify-between">
+        <nav
+          className="mx-auto w-full max-w-3xl px-6 py-4 sm:px-8 sm:py-6 flex items-center justify-between"
+          aria-label="Primary"
+        >
           <Link href="/" className="text-2xl font-bold">
             DI
           </Link>
@@ -43,7 +46,7 @@ export default function Home() {
             </li>
             <li>
               <Link href="#featured-project" className="hover:text-foreground">
-                Case Studies
+                Featured Work
               </Link>
             </li>
             <li>
@@ -172,7 +175,7 @@ export default function Home() {
       </main>
       <footer className="mt-auto bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <p className="text-center text-sm text-foreground/60 py-4 px-6">
-          © 2026 David Ivankov.
+          © 2026 David Ivankov.{" "}
           <span className="block sm:inline">
             Built with Next.js, TypeScript, and Tailwind CSS.
           </span>
