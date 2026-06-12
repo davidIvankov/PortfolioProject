@@ -88,7 +88,7 @@ export default function Home() {
               href="#featured-work"
               className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-3 text-sm font-medium text-background sm:text-base"
             >
-              View Featured Work
+              View featured work
             </a>
             <a
               href="#contact"
@@ -100,10 +100,13 @@ export default function Home() {
         </section>
 
         <section id="featured-work" className="mb-20 sm:mb-28 scroll-mt-16">
-          <h2 className="text-xs font-medium uppercase tracking-wider text-foreground/60 sm:text-sm">
+          <h2
+            id="featured-heading"
+            className="text-2xl font-semibold tracking-tight sm:text-3xl"
+          >
             Featured Work
           </h2>
-          <ul className="mt-6 space-y-2 text-base text-foreground/80">
+          <ul className="mt-6 space-y-4">
             <li>
               <article className="flex flex-col gap-3 rounded-2xl border border-foreground/10 p-6">
                 <h3 className="border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl">
