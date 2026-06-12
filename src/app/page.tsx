@@ -99,7 +99,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="featured-work" className="mb-20 sm:mb-28 scroll-mt-16">
+        <section
+          id="featured-work"
+          aria-labelledby="featured-heading"
+          className="mb-20 sm:mb-28 scroll-mt-16"
+        >
           <h2
             id="featured-heading"
             className="text-2xl font-semibold tracking-tight sm:text-3xl"
