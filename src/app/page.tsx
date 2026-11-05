@@ -1,11 +1,5 @@
 import Link from "next/link";
-
-const aiMeetingNotesToolProofPoints = [
-  "Built with Next.js, React, TypeScript, Tailwind, and Vercel",
-  "Invite-gated beta flow and request-access path",
-  "Public sample meeting page for recruiter/customer review",
-  "Privacy, terms, pricing, and how-it-works pages",
-];
+import Image from "next/image";
 
 const collabPlanProofPoints = [
   "Public GitHub repository with client and server structure",
@@ -38,6 +32,7 @@ const skillGroups = [
 export default function Home() {
   return (
     <>
+      {/*
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <nav
           className="mx-auto w-full max-w-3xl px-6 py-4 sm:px-8 sm:py-6 flex items-center justify-between"
@@ -65,37 +60,56 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-
-      <main className="mx-auto w-full max-w-3xl px-6 py-16 sm:px-8 sm:py-24">
-        <section aria-labelledby="hero-heading" className="mb-20 sm:mb-28">
-          <p className="text-xs font-medium uppercase tracking-wider text-foreground/60 sm:text-sm">
-            Web Developer · Next.js · React · TypeScript
+*/}
+      <main className="mx-auto flex-1 w-full max-w-screen-2xl px-6 py-16 sm:px-8 sm:py-24">
+        <section aria-labelledby="hero-heading" className="">
+          <p className="text-xs font-medium uppercase tracking-wider mb-4 text-foreground/60 sm:text-sm ">
+            Full-Stack Web Developer
           </p>
-          <h1
-            id="hero-heading"
-            className="mt-4 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl"
-          >
-            David Ivankov builds practical SaaS-style web applications.
-          </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            I am a web developer focused on clean, maintainable interfaces and
-            real product workflows. My current featured project is an AI Meeting
-            Notes Tool, built as a SaaS-style product with invite-gated beta
-            access, public marketing pages, and a recruiter-readable demo flow.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <a
-              href="#featured-work"
-              className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-3 text-sm font-medium text-background sm:text-base"
-            >
-              View featured work
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-md border border-foreground/20 px-5 py-3 text-sm font-medium text-foreground sm:text-base"
-            >
-              Contact me
-            </a>
+          <div className="mb-20 sm:mb-28 h-screen flex flex-col lg:flex-row gap-x-12 gap-y-12">
+            <div className="flex flex-col items-start justify-start h-screen w-full padding-right-12 ">
+              <div className=" flex flex-col items-start justify-center margin-top-0">
+                <h1
+                  id="hero-heading"
+                  className="text-7xl font-semibold [text-box:trim-both_cap_alphabetic] leading-none  tracking-tighter sm:text-4xl md:text-7xl "
+                >
+                  Hi, I&apos;m David.
+                  <br />I build web applications.
+                </h1>
+                <p className="mt-4 text-lg leading-relaxed text-foreground/80 sm:text-lg ">
+                  I&apos;m a web developer working with Vue.js, Node.js, and
+                  TypeScript to build functional, user-friendly applications. I
+                  enjoy solving technical challenges, exploring how different
+                  parts of an application work together, and continuously
+                  improving my skills as a developer.
+                </p>
+              </div>
+              <div>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+                  <a
+                    href="#featured-work"
+                    className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-3 text-sm font-medium text-background sm:text-base"
+                  >
+                    View featured work
+                  </a>
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center justify-center rounded-md border border-foreground/20 px-5 py-3 text-sm font-medium text-foreground sm:text-base"
+                  >
+                    Contact me
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className=" h-full flex items-start">
+              <Image
+                src="/images/projects/collabplan/calendar.png"
+                alt="Hero image"
+                width={1200}
+                height={800}
+                className="w-full h-auto min-w-[600px] max-w-full"
+              />
+            </div>
           </div>
         </section>
 
@@ -111,31 +125,6 @@ export default function Home() {
             Featured Work
           </h2>
           <ul className="mt-6 space-y-4">
-            <li>
-              <article className="flex flex-col gap-3 rounded-2xl border border-foreground/10 p-6">
-                <h3 className="border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl">
-                  AI Meeting Notes Tool
-                </h3>
-                <p className="text-base leading-relaxed text-foreground/80">
-                  A SaaS-style web app that turns meeting content into
-                  structured summaries and action items. The project includes
-                  public product pages, beta access flow, pricing, privacy,
-                  terms, and a sample meeting page to show the product clearly
-                  without exposing the private repository.
-                </p>
-                <ul className="mt-6 space-y-4">
-                  {aiMeetingNotesToolProofPoints.map((point) => (
-                    <li key={point} className="flex items-start gap-3">
-                      <span
-                        aria-hidden="true"
-                        className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/50"
-                      />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            </li>
             <li>
               <article className="flex flex-col gap-3 rounded-2xl border border-foreground/10 p-6">
                 <h3 className="border-b border-foreground/10 pb-2 text-lg font-semibold tracking-tight sm:text-xl">
@@ -159,6 +148,12 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                <Link
+                  href="/case-studies/ai-meeting-notes"
+                  className="text-sm font-medium text-foreground hover:underline sm:text-base"
+                >
+                  Read the case study →
+                </Link>
               </article>
             </li>
           </ul>
