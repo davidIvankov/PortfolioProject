@@ -64,7 +64,7 @@ export default function Home() {
       <main className="flex-1 w-full">
         <section
           aria-labelledby="hero-heading"
-          className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-12 sm:py-24 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center "
+          className="mx-auto min-h-screen flex flex-col justify-center w-full max-w-7xl px-4 py-16 sm:px-12 sm:py-24 lg:px-8 "
         >
           <p className="text-xs font-medium uppercase tracking-wider mb-4 text-foreground/60 sm:text-sm ">
             Full-Stack Web Developer
@@ -109,7 +109,7 @@ export default function Home() {
               />
               <div
                 aria-hidden="true"
-                className="absolute -inset-2 rounded-[2rem] bg-violet-400/20 blur-[60px] :-inset-4"
+                className="absolute -inset-2 rounded-4xl bg-violet-400/20 blur-[60px] :-inset-4"
               />
 
               <div
@@ -239,7 +239,7 @@ export default function Home() {
           </a>
         </section>
       </main>
-      <footer className="mt-auto bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <footer className="mt-auto bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
         <p className="text-center text-sm text-foreground/60 py-4 px-6">
           © 2026 David Ivankov.{" "}
           <span className="block sm:inline">
