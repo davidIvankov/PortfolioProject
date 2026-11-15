@@ -61,27 +61,28 @@ export default function Home() {
         </nav>
       </header>
 */}
-      <main className="mx-auto flex-1 w-full max-w-screen-2xl px-6 py-16 sm:px-8 sm:py-24">
-        <section aria-labelledby="hero-heading" className="">
+      <main className="flex-1 w-full">
+        <section
+          aria-labelledby="hero-heading"
+          className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-12 sm:py-24 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center "
+        >
           <p className="text-xs font-medium uppercase tracking-wider mb-4 text-foreground/60 sm:text-sm ">
             Full-Stack Web Developer
           </p>
-          <div className="mb-20 sm:mb-28 h-screen flex flex-col lg:flex-row gap-x-12 gap-y-12">
-            <div className="flex flex-col items-start justify-start h-screen w-full padding-right-12 ">
+          <div className=" gap-y-12 mb-20 sm:mb-28  flex flex-col  lg:flex-row gap-x-12 bg:gap-y-12">
+            <div className="flex flex-col items-start justify-start   w-full">
               <div className=" flex flex-col items-start justify-center margin-top-0">
                 <h1
                   id="hero-heading"
-                  className="text-7xl font-semibold [text-box:trim-both_cap_alphabetic] leading-none  tracking-tighter sm:text-4xl md:text-7xl "
+                  className="text-5xl font-semibold [text-box:trim-both_cap_alphabetic] leading-none  tracking-tighter sm:text-7xl md:text-7xl "
                 >
                   Hi, I&apos;m David.
                   <br />I build web applications.
                 </h1>
-                <p className="mt-4 text-lg leading-relaxed text-foreground/80 sm:text-lg ">
-                  I&apos;m a web developer working with Vue.js, Node.js, and
-                  TypeScript to build functional, user-friendly applications. I
-                  enjoy solving technical challenges, exploring how different
-                  parts of an application work together, and continuously
-                  improving my skills as a developer.
+                <p className="mt-4 text-lg leading-relaxed text-foreground/80 sm:text-2xl lg:text-xl ">
+                  I build practical applications using Vue.js, Node.js, and
+                  TypeScript, with a focus on usability and solving real
+                  problems.
                 </p>
               </div>
               <div>
@@ -101,14 +102,45 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" h-full flex items-start">
-              <Image
-                src="/images/projects/collabplan/calendar.png"
-                alt="Hero image"
-                width={1200}
-                height={800}
-                className="w-full h-auto min-w-[600px] max-w-full"
+            <div className="group relative w-full min-w-0">
+              <div
+                aria-hidden="true"
+                className="absolute -inset-4 rounded-[2.5rem] bg-indigo-500/30 blur-[120px] sm:-inset-10"
               />
+              <div
+                aria-hidden="true"
+                className="absolute -inset-2 rounded-[2rem] bg-violet-400/20 blur-[60px] :-inset-4"
+              />
+
+              <div
+                className="
+      relative overflow-hidden rounded-2xl
+      border border-white/20 bg-zinc-900
+      shadow-[0_25px_80px_rgba(0,0,0,0.55)]
+      p-3
+      transition duration-300 ease-out
+      group-hover:-translate-y-1 group-hover:scale-[1.01]
+    "
+              >
+                <Image
+                  src="/images/projects/collabplan/calendar.png"
+                  alt="CollabPlan calendar interface"
+                  width={1200}
+                  height={800}
+                  className="block w-full h-auto"
+                />
+              </div>
+
+              <span
+                className="
+      absolute -top-4 right-4 rounded-full
+      bg-indigo-500 px-4 py-1.5
+      text-sm font-semibold text-white
+      shadow-lg
+    "
+              >
+                Featured
+              </span>
             </div>
           </div>
         </section>
