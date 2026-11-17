@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import FloatingNav from "./components/layout/FloatingNav";
 
 const collabPlanProofPoints = [
   "Public GitHub repository with client and server structure",
@@ -32,37 +33,10 @@ const skillGroups = [
 export default function Home() {
   return (
     <>
-      {/*
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <nav
-          className="mx-auto w-full max-w-3xl px-6 py-4 sm:px-8 sm:py-6 flex items-center justify-between"
-          aria-label="Primary"
-        >
-          <Link href="/" className="text-2xl font-bold">
-            DI
-          </Link>
-          <ul className="flex items-center gap-4 text-sm font-medium text-foreground/60 sm:text-base">
-            <li>
-              <Link href="/" className="hover:text-foreground">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="#featured-work" className="hover:text-foreground">
-                Featured Work
-              </Link>
-            </li>
-            <li>
-              <Link href="#contact" className="hover:text-foreground">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-*/}
+      <FloatingNav />
       <main className="flex-1 w-full">
         <section
+          id="top"
           aria-labelledby="hero-heading"
           className="mx-auto min-h-screen flex flex-col justify-center w-full max-w-7xl px-4 py-16 sm:px-12 sm:py-24 lg:px-8 "
         >
@@ -86,7 +60,10 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+                <div
+                  id="action-buttons"
+                  className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4"
+                >
                   <a
                     href="#featured-work"
                     className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-3 text-sm font-medium text-background sm:text-base"
@@ -148,7 +125,7 @@ export default function Home() {
         <section
           id="featured-work"
           aria-labelledby="featured-heading"
-          className="mb-20 sm:mb-28 scroll-mt-16"
+          className="mb-20 sm:mb-28 scroll-mt-16 min-h-screen"
         >
           <h2
             id="featured-heading"
@@ -191,11 +168,12 @@ export default function Home() {
           </ul>
         </section>
 
-        <section aria-labelledby="skills-heading" className="mb-20 sm:mb-28">
-          <h2
-            id="skills-heading"
-            className="text-2xl font-semibold tracking-tight sm:text-3xl"
-          >
+        <section
+          id="skills"
+          aria-labelledby="skills-heading"
+          className="mb-20 sm:mb-28 min-h-screen"
+        >
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
             Skills
           </h2>
           <dl className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
@@ -219,7 +197,7 @@ export default function Home() {
         <section
           id="contact"
           aria-labelledby="contact-heading"
-          className="scroll-mt-16"
+          className="scroll-mt-16 min-h-screen"
         >
           <h2
             id="contact-heading"
